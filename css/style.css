@@ -1,0 +1,742 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*============ Scroll Bar Start ============*/
+::-webkit-scrollbar {
+  width: 12px; /* ширина для вертикального скролла */
+  height: 10px; /* высота для горизонтального скролла */
+  background-color: #292929;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #9b9a9a;
+  border-radius: 9em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(182, 182, 182);
+}
+
+/* Стрелки */
+
+::-webkit-scrollbar-button:vertical:start:decrement {
+  background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #7e7d7d;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  background: linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #7e7d7d;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+  background: linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+  background: linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%),
+    linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+/*============ Scroll Bar End ============*/
+
+body {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #102746;
+}
+
+img {
+  /* Для того чтобы изображения на странице никогда не превышали гирину контейнера + чтобы сжималось пропорционально высоте */
+  max-width: 100%;
+  height: auto;
+}
+/*================== Tempates Start ==================*/
+.container {
+  padding: 0 20px;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.wrapper-full {
+  max-width: 1262px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.places-title {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  color: #102746;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.places-title::after {
+  display: block;
+  content: "";
+  width: 252px;
+  height: 3px;
+  background-color: #006dfe;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/*================== Tempates End ==================*/
+
+/*================== Header Start ==================*/
+.header {
+  position: fixed; /*Для того чтобы меню двигалось вместе со скролом*/
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header__active {
+  background: #0e1d28;
+  opacity: 0.6;
+  transition: 0.3s linear;
+  padding-bottom: 20px;
+  z-index: 999;
+}
+
+.header__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 56px;
+}
+
+.header__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.header__item {
+  margin-right: 82px;
+}
+
+.header__item:last-child {
+  margin-right: 0;
+}
+
+.header__link {
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.header__link:hover,
+.header__link:focus,
+.header__link:active {
+  opacity: 0.75;
+}
+
+/*================== Header Burger Menu Start ==================*/
+.header__burger {
+  display: none;
+  width: 40px;
+  height: 28px;
+  position: relative;
+  cursor: pointer;
+}
+
+.burger__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+}
+
+.burger__line_first {
+  top: 0;
+}
+
+.burger__line_second {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger__line_third {
+  bottom: 0;
+}
+/*================== Header End ==================*/
+
+/*================== Main Page Start ==================*/
+.intro {
+  min-height: 100vh;
+  background: url(/img/Main.png) no-repeat center;
+  background-size: cover;
+  padding-top: 263px;
+  padding-bottom: 323px;
+  color: white;
+}
+
+.intro .intro__title {
+  margin-bottom: 22px;
+  max-width: 619px;
+  font-weight: 500;
+  line-height: 60px;
+  font-size: 50px;
+}
+
+.intro .intro__text {
+  max-width: 546px;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 59px;
+}
+.search-form__container {
+  border: 0px !important;
+}
+
+.search-form__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.search-form__field {
+  width: 297px;
+  background: url(/img/svg/Oval.svg) no-repeat left 6px; /*Можно указывать высоту в px*/
+  background-size: 20px;
+  border: 0;
+  border-bottom: 2px solid #bfc0c5;
+  margin-right: 60px;
+  padding-left: 43px;
+  padding-bottom: 22px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+}
+
+.search-form__field::placeholder {
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.search-form__submit {
+  padding: 15px 39px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  background-color: #1b7dff;
+  border-radius: 3px;
+  border: 0; /*Убирает рамку*/
+}
+
+.search-form__submit:hover,
+.search-form__submit:focus,
+.search-form__submit:active {
+  background-color: #0066ec;
+}
+
+/*================== Benefits Start ==================*/
+.benefits__container {
+  max-width: 1262px;
+  background-color: white;
+  box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+  border: 2px solid blue;
+  margin: 0 auto;
+  position: relative;
+}
+
+.benefits__title {
+  width: 100%;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  padding: 93px 100px 88px 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(
+    -100%
+  ); /*Позволяет перенести заголовок на основную часть стараницы*/
+  background-color: white;
+}
+
+/*================== Cards ==================*/
+.benefits {
+  margin-bottom: 131px;
+}
+.benefits__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 55px;
+  padding: 0 100px;
+}
+
+.benefits__card {
+  grid-column: span 1; /*Узнай для чего это*/
+  margin-bottom: 112px;
+}
+
+/*================== Logo pic ==================*/
+.benefits__pic-container {
+  max-width: 66px;
+  margin-bottom: 37px;
+}
+
+.benefits__logo-pic {
+  /* У изображенией img всегда есть небольшой отступ снизу. Чтобы убрать его можно исп. display: block; */
+  display: block;
+}
+
+.benefits__mini-title {
+  margin-bottom: 26px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.benefits__text {
+  margin-bottom: 39px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.benefits__cards-more {
+  display: inline-block;
+  background: url("/img/svg/Arrow-Shape.svg") no-repeat 95% center; /* Пытался сделать через img вставленный в ссылку <a>. Потом сделал display:inline-block; и padding */
+  padding-right: 59px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  color: #006dfe;
+  transition: 0.2s all;
+}
+
+.benefits__cards-more:hover,
+.benefits__cards-more:focus {
+  background: url("/img/svg/Arrow-Shape.svg") no-repeat right center;
+}
+/*================== Benefits Start ==================*/
+
+/*================== Places styles start ==================*/
+.places {
+  margin-bottom: 131px; /*Реализация нижних отступов является хорошей практикой*/
+}
+
+.places__caption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+
+.places__title {
+  margin-right: 15px;
+}
+
+.places__view-all {
+  font-size: 16px;
+  color: #006dfe;
+  text-decoration: none;
+  padding-right: 59px;
+  background: url(/img/svg/Arrow-Shape.svg) no-repeat right center;
+}
+
+.places__view-all:hover,
+.places__view-all:focus {
+  opacity: 0.65;
+}
+
+.places__cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+
+.places__card {
+  position: relative;
+  overflow: hidden;
+}
+
+.places__card::after {
+  /*Затемняет фон картинок(типа фильтра). В figma называется overlay */
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 24, 36, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.places__card:hover .places__card-pic {
+  transform: scale(1.05);
+}
+
+.places__card-title {
+  font-size: 50px;
+  line-height: 60px;
+  color: white;
+  position: absolute;
+  bottom: 27px;
+  left: 29px;
+  z-index: 3;
+}
+
+.places__card_size_lg {
+  grid-column: span 3; /*Охват ячеек */
+}
+
+.places__card_size_sm {
+  grid-column: span 2;
+}
+
+.places__card-pic {
+  width: 100%;
+  transition: 0.15s all;
+}
+
+.places__card-pic_size_lg {
+  height: 354px;
+  object-fit: cover;
+}
+
+.places__card-pic_size_sm {
+  height: 283px;
+  object-fit: cover;
+}
+
+.places__card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+/*================== Places styles end ==================*/
+
+/*================== Tours styles start ==================*/
+.tours {
+  margin-bottom: 139px;
+}
+
+.tours__block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0 108px;
+  align-items: center;
+  margin-bottom: 77px;
+}
+
+.tour__pic {
+  margin-bottom: 47px;
+}
+
+.tour__info {
+  margin-bottom: 47px;
+}
+
+.tour__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  color: #102746;
+  margin-bottom: 77px;
+}
+
+.tour__text {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #102746;
+  margin-bottom: 40px;
+}
+
+.tours__view-more {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #006dfe;
+  padding-right: 59px;
+  background: url(/img/svg/Arrow-Shape.svg) no-repeat 95% center;
+}
+
+.tours__view-more:hover,
+.tours__view-more:active,
+.tours__view-more:focus {
+  transition: 0.2s ease;
+  background: url(/img/svg/Arrow-Shape.svg) no-repeat right center;
+  opacity: 0.75;
+}
+
+/*================== Tours styles end ==================*/
+
+/*================== Top places start ==================*/
+.top {
+  margin-bottom: 86px;
+}
+
+.top__title {
+  margin-bottom: 54px;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  color: #102746;
+}
+
+.top__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 57px;
+}
+
+.top__card-pic {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+.top__card {
+  display: flex;
+  flex-direction: column;
+}
+
+.top__card-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 100%;
+  background: rgba(21, 24, 36, 0.6);
+  padding: 16px 25px;
+}
+
+.top__pic-name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  margin: 0 auto 0 0;
+}
+
+.top__card-likes {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  padding-right: 20px;
+  background: url(/img/svg/Heart-icon.svg) no-repeat right;
+  margin-right: 14px;
+}
+
+.top__card-comments {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #fff;
+  padding-right: 23px;
+  background: url(/img/svg/Comments-icon.svg) no-repeat right;
+}
+
+.top__card-text {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 31px;
+}
+
+.top__card-more {
+  width: 118px;
+  padding: 12px 19px;
+  background: #006dfe;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  margin: auto 0 0 0;
+}
+
+.top__card-more:hover,
+.top__card-more:focus,
+.top__card-more:active {
+  background: #0e66da;
+}
+
+/*================== Top places start ==================*/
+
+/*================== Videos start ==================*/
+.videos {
+  width: 100%;
+}
+
+.videos__container {
+  /*Хак как встроить youtube видео адаптивно(просмотри внимательно все что связанно с video) */
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.video__youtube {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video__item {
+  padding-top: 56.25%;
+}
+/*================== Videos end ==================*/
+
+/*================== Footer start ==================*/
+.footer {
+  background: #0e1d28;
+  padding: 119px 0;
+}
+
+.footer__basement {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__logo {
+  width: 50%;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.footer__menu {
+  padding: 15px;
+}
+
+.footer__item {
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  list-style: none;
+}
+
+.footer__link {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer__link:hover,
+.footer__link:active,
+.footer__link:focus {
+  opacity: 0.7;
+}
+/*================== Footer end ==================*/
+
+/*================== Media start ==================*/
+@media only screen and (max-width: 768px) {
+  .header__burger {
+    display: block;
+  }
+
+  /*Бургер-меню при открытие*/
+  .header__nav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #19191a;
+    z-index: 10;
+    padding: 75px;
+    transform: translateX(100%); /*Для сдвига вправо бургер меню*/
+  }
+  /*Бургер-меню при закрытие*/
+  .header__nav-active {
+    transform: translateX(0); /*Для сдвига влево бургер меню*/
+  }
+
+  .header__item {
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .header__item:last-child {
+    margin-bottom: 0;
+  }
+
+  .header__link {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  /*Меню*/
+  .header__active {
+    background: #0e1d28;
+    opacity: 0.8;
+    padding-bottom: 30px;
+  }
+
+  /* ======= Крестик ======= */
+  .header__nav-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    z-index: 11;
+  }
+
+  .header__nav-close-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+  }
+
+  /*Метод как нарисовать крестик*/
+  .header__nav-close-line:first-child {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .header__nav-close-line:last-child {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+
+/*================== Media End ==================*/
