@@ -1,6 +1,7 @@
-(function () { //Самовызывающаяся функция(скрипт для изменения цвета фона при скроллинге)
-
+//Затемнение header при скролле 
+(function () { 
     const header = document.querySelector(".header");
+
     window.onscroll = () => { //При скролле
         if(window.pageYOffset > 50) { //Если спустимся вниз на 50px
             header.classList.add("header__active"); // Добавь класс(заренее добавил в style.css "header__active")* Сделал вместо add toggle(моргало при скролле)
@@ -14,19 +15,18 @@
 
 
 
-// Burger menu Проанализируй компактный вариант с видео
+// Burger menu
+(function burgerMenuAll(){
+    const burger = document.querySelector(".burger");
+    const headerClose = document.querySelector(".header__nav-close");
+    const headerNav = document.querySelector(".header__nav");
 
-//SELECTORS
-const burger = document.querySelector(".burger");
-const headerClose = document.querySelector(".header__nav-close");
-const headerNav = document.querySelector(".header__nav");
-
-
-(function burgerMenuAll(){ //Укоротил функцию сверху в итоге занимает в 2 раза меньше места
-    burger.addEventListener('click', () => { //Add
+    
+    burger.addEventListener('click', () => { //Add    
         headerNav.classList.add("header__nav-active");
     });
-    headerNav.addEventListener('click', () => {  //Remove
+
+    headerClose.addEventListener('click', () => {  //Remove
         headerNav.classList.remove("header__nav-active");
     });
 
@@ -36,9 +36,9 @@ const headerNav = document.querySelector(".header__nav");
 
 
 
-
+/*
 //EVENTS
-/*burger.addEventListener('click', burgerMenu);
+burger.addEventListener('click', burgerMenu);
 headerClose.addEventListener('click', burgerClose);
 
 
@@ -53,7 +53,6 @@ function burgerMenu(){
 function burgerClose(){
     headerNav.classList.remove("header__nav-active");
 }
-
 */
 
 
