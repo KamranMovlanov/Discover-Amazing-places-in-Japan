@@ -159,6 +159,7 @@ img {
   height: 28px;
   position: relative;
   cursor: pointer;
+  transition: 0.1s linear;
 }
 
 .burger__line {
@@ -168,6 +169,10 @@ img {
   background-color: white;
   position: absolute;
   left: 0;
+}
+
+.header__burger:hover {
+  transform: translateY(-10%);
 }
 
 .burger__line_first {
@@ -716,7 +721,7 @@ img {
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 0px;
+    top: 55px;
     right: 20px;
     z-index: 11;
   }
@@ -736,6 +741,100 @@ img {
   }
   .header__nav-close-line:last-child {
     transform: translateY(-50%) rotate(-45deg);
+  }
+
+  .intro .intro__title {
+    margin-bottom: 22px;
+    max-width: 619px;
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 35px;
+  }
+
+  .search-form__info {
+    max-width: 300px;
+  }
+
+  .search-form__field {
+    max-width: 297px;
+    background: url(/img/svg/Oval.svg) no-repeat left 6px; /*Можно указывать высоту в px*/
+    background-size: 20px;
+    border: 0;
+    border-bottom: 2px solid #bfc0c5;
+    margin-right: 60px;
+    margin-bottom: 10px;
+    padding-left: 43px;
+    padding-bottom: 22px;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .search-form__submit {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-left: 5px;
+    max-width: 50%;
+  }
+
+  .benefits__container {
+    max-width: 768px;
+    background-color: white;
+    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+    border: 2px solid blue;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .benefits__title {
+    width: 100%;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    padding: 53px 20px 48px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(
+      -100%
+    ); /*Позволяет перенести заголовок на основную часть стараницы*/
+    background-color: white;
+  }
+
+  /*================== Cards ==================*/
+  .benefits {
+    margin-bottom: 131px;
+  }
+  .benefits__cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 5px;
+    padding: 20px 50px;
+  }
+
+  .top__title {
+    margin-bottom: 54px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 42px;
+    color: #102746;
+  }
+
+  .top__cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 57px;
+    margin: 0 auto;
+  }
+
+  .top__card-more {
+    max-width: 118px;
+    padding: 12px 19px;
+    background: #006dfe;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    margin: auto 0 0 10px;
   }
 }
 
