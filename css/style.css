@@ -210,8 +210,8 @@ img {
 .intro .intro__text {
   max-width: 546px;
   color: white;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 26px;
   margin-bottom: 59px;
 }
 .search-form__container {
@@ -325,6 +325,7 @@ img {
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
+  text-align: center;
 }
 
 .benefits__cards-more {
@@ -678,6 +679,12 @@ img {
     display: block;
   }
 
+  .wrapper-full {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
   /*Бургер-меню при открытие*/
   .header__nav {
     position: fixed;
@@ -693,6 +700,32 @@ img {
   /*Бургер-меню при закрытие*/
   .header__nav-active {
     transform: translateX(0); /*Для сдвига влево бургер меню*/
+  }
+
+  .intro {
+    min-height: 100vh;
+    background: url(/img/Main.png) no-repeat center;
+    background-size: cover;
+    padding-top: 163px;
+    padding-bottom: 323px;
+  }
+
+  .intro .intro__title {
+    margin-bottom: 30px;
+    max-width: 619px;
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .intro .intro__text {
+    max-width: 546px;
+    color: white;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 59px;
+    text-align: center;
   }
 
   .header__item {
@@ -743,12 +776,8 @@ img {
     transform: translateY(-50%) rotate(-45deg);
   }
 
-  .intro .intro__title {
-    margin-bottom: 22px;
-    max-width: 619px;
-    font-weight: 500;
-    line-height: 30px;
-    font-size: 35px;
+  .search-form {
+    margin: 90px 0 0 10px;
   }
 
   .search-form__info {
@@ -773,7 +802,8 @@ img {
   .search-form__submit {
     padding: 10px 20px;
     font-size: 18px;
-    margin-left: 5px;
+    margin-left: 80px;
+    margin-top: 40px;
     max-width: 50%;
   }
 
@@ -784,6 +814,17 @@ img {
     border: 2px solid blue;
     margin: 0 auto;
     position: relative;
+  }
+
+  .benefits__pic-container {
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .benefits__mini-title {
+    margin-bottom: 26px;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
   }
 
   .benefits__title {
@@ -812,8 +853,35 @@ img {
     padding: 20px 50px;
   }
 
+  .benefits__cards-more {
+    margin-left: 80px;
+  }
+
+  .benefits__card {
+    margin-bottom: 30px;
+  }
+
+  .places__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 50px;
+  }
+
+  .places__title {
+    margin-bottom: 10px;
+  }
+
+  .tours__block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0 20px;
+    align-items: center;
+    margin-bottom: 77px;
+  }
+
   .top__title {
-    margin-bottom: 54px;
+    margin-bottom: 44px;
     font-weight: 500;
     font-size: 30px;
     line-height: 42px;
@@ -822,8 +890,8 @@ img {
 
   .top__cards {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 57px;
+    grid-template-columns: 1fr;
+    grid-gap: 37px;
     margin: 0 auto;
   }
 
@@ -835,6 +903,42 @@ img {
     color: #fff;
     font-size: 16px;
     margin: auto 0 0 10px;
+  }
+
+  .footer {
+    background: #0e1d28;
+    padding: 30px 0;
+  }
+
+  .footer__logo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .footer__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .footer__nav:last-child {
+    justify-content: center;
+  }
+
+  .footer__menu {
+    padding: 35px;
+  }
+
+  .footer__link {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    display: flex;
+    justify-content: center;
   }
 }
 
