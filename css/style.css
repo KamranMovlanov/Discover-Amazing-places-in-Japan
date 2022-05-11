@@ -224,7 +224,7 @@ img {
 }
 .search-form__field {
   width: 297px;
-  background: url(/img/svg/Oval.svg) no-repeat left 6px; /*Можно указывать высоту в px*/
+  background: url(https://raw.githubusercontent.com/KamranMovlanov/Discover-Amazing-places-in-Japan/928b9693551dc2db0d843ad476f96702f6ff83e9/img/svg/Oval.svg) no-repeat left 6px; /*Можно указывать высоту в px*/
   background-size: 20px;
   border: 0;
   border-bottom: 2px solid #bfc0c5;
@@ -330,7 +330,7 @@ img {
 
 .benefits__cards-more {
   display: inline-block;
-  background: url("/img/svg/Arrow-Shape.svg") no-repeat 95% center; /* Пытался сделать через img вставленный в ссылку <a>. Потом сделал display:inline-block; и padding */
+  background: url("https://raw.githubusercontent.com/KamranMovlanov/Discover-Amazing-places-in-Japan/928b9693551dc2db0d843ad476f96702f6ff83e9/img/svg/Arrow-Shape.svg") no-repeat 95% center; /* Пытался сделать через img вставленный в ссылку <a>. Потом сделал display:inline-block; и padding */
   padding-right: 59px;
   font-weight: normal;
   font-size: 16px;
@@ -342,7 +342,7 @@ img {
 
 .benefits__cards-more:hover,
 .benefits__cards-more:focus {
-  background: url("/img/svg/Arrow-Shape.svg") no-repeat right center;
+  background: url("https://raw.githubusercontent.com/KamranMovlanov/Discover-Amazing-places-in-Japan/928b9693551dc2db0d843ad476f96702f6ff83e9/img/svg/Arrow-Shape.svg") no-repeat right center;
 }
 /*================== Benefits Start ==================*/
 
@@ -368,7 +368,7 @@ img {
   color: #006dfe;
   text-decoration: none;
   padding-right: 59px;
-  background: url(/img/svg/Arrow-Shape.svg) no-repeat right center;
+  background: url(https://raw.githubusercontent.com/KamranMovlanov/Discover-Amazing-places-in-Japan/928b9693551dc2db0d843ad476f96702f6ff83e9/img/svg/Arrow-Shape.svg) no-repeat right center;
 }
 
 .places__view-all:hover,
@@ -493,14 +493,14 @@ img {
   line-height: 24px;
   color: #006dfe;
   padding-right: 59px;
-  background: url(/img/svg/Arrow-Shape.svg) no-repeat 95% center;
+  background: url(https://raw.githubusercontent.com/KamranMovlanov/Discover-Amazing-places-in-Japan/928b9693551dc2db0d843ad476f96702f6ff83e9/img/svg/Arrow-Shape.svg) no-repeat 95% center;
 }
 
 .tours__view-more:hover,
 .tours__view-more:active,
 .tours__view-more:focus {
   transition: 0.2s ease;
-  background: url(/img/svg/Arrow-Shape.svg) no-repeat right center;
+  background: url(https://raw.githubusercontent.com/KamranMovlanov/Discover-Amazing-places-in-Japan/928b9693551dc2db0d843ad476f96702f6ff83e9/img/svg/Arrow-Shape.svg) no-repeat right center;
   opacity: 0.75;
 }
 
@@ -562,7 +562,7 @@ img {
   line-height: 24px;
   color: #fff;
   padding-right: 20px;
-  background: url(/img/svg/Heart-icon.svg) no-repeat right;
+  background: url(https://raw.githubusercontent.com/KamranMovlanov/Discover-Amazing-places-in-Japan/928b9693551dc2db0d843ad476f96702f6ff83e9/img/svg/Heart-icon.svg) no-repeat right;
   margin-right: 14px;
 }
 
@@ -572,7 +572,7 @@ img {
   line-height: 24px;
   color: #fff;
   padding-right: 23px;
-  background: url(/img/svg/Comments-icon.svg) no-repeat right;
+  background: url(https://raw.githubusercontent.com/KamranMovlanov/Discover-Amazing-places-in-Japan/928b9693551dc2db0d843ad476f96702f6ff83e9/img/svg/Comments-icon.svg) no-repeat right;
 }
 
 .top__card-text {
@@ -704,7 +704,7 @@ img {
 
   .intro {
     min-height: 100vh;
-    background: url(/img/Main.png) no-repeat center;
+    background: url(https://raw.githubusercontent.com/KamranMovlanov/Discover-Amazing-places-in-Japan/main/img/Main.png) no-repeat center;
     background-size: cover;
     padding-top: 163px;
     padding-bottom: 323px;
@@ -786,7 +786,7 @@ img {
 
   .search-form__field {
     max-width: 297px;
-    background: url(/img/svg/Oval.svg) no-repeat left 6px; /*Можно указывать высоту в px*/
+    background: url(https://raw.githubusercontent.com/KamranMovlanov/Discover-Amazing-places-in-Japan/928b9693551dc2db0d843ad476f96702f6ff83e9/img/svg/Oval.svg) no-repeat left 6px; /*Можно указывать высоту в px*/
     background-size: 20px;
     border: 0;
     border-bottom: 2px solid #bfc0c5;
