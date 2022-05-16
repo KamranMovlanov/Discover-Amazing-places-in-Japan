@@ -2,12 +2,12 @@
 (function () { 
     const header = document.querySelector(".header");
 
-    window.onscroll = () => { //При скролле
-        if(window.pageYOffset > 50) { //Если спустимся вниз на 50px
-            header.classList.add("header__active"); // Добавь класс(заренее добавил в style.css "header__active")* Сделал вместо add toggle(моргало при скролле)
+    window.onscroll = () => {
+        if(window.pageYOffset > 50) { 
+            header.classList.add("header__active");
         }
        else{
-        header.classList.remove("header__active"); //Если вернешься на место, < 50px то удаляй класс с затемнением
+        header.classList.remove("header__active"); 
        }
     }
 
