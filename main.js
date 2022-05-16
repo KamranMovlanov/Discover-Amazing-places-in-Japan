@@ -21,12 +21,12 @@
     const headerNav = document.querySelector(".header__nav");
 
     //Add    
-    burger.addEventListener('click', () => { 
+    burger.addEventListener('touchstart', () => { 
         headerNav.classList.add("header__nav-active");
     });
     
     //Remove
-    headerClose.addEventListener('click', () => {  
+    headerClose.addEventListener('touchstart', () => {  
         headerNav.classList.remove("header__nav-active");
     });
 
