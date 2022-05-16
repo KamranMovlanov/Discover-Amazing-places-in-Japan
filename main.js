@@ -1,3 +1,5 @@
+alert("Hello !")
+
 //Затемнение header при скролле 
 (function () { 
     const header = document.querySelector(".header");
@@ -13,7 +15,6 @@
 
 }());
 
-alert("Hello !")
 
 // Burger menu
 (function burgerMenuAll(){
