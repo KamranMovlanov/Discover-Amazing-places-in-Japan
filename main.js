@@ -13,6 +13,7 @@
 
 }());
 
+alert("Hello !")
 
 // Burger menu
 (function burgerMenuAll(){
